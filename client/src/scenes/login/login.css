@@ -1,0 +1,25 @@
+.log {
+    background-image: url('https://img.freepik.com/premium-photo/yellow-white-geometric-shapes-black-background-wallpaper_975254-155.jpg?w=900');
+    background-size: cover;
+
+}
+
+.login {
+
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+
+    background-color: rgba(223, 209, 209, 0.15);
+
+    backdrop-filter: blur(5px);
+    font-size: 15px;
+}
+
+.com {
+    color: white;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+
+    background-color: rgba(223, 209, 209, 0.15);
+
+    backdrop-filter: blur(5px);
+    font-size: 15px;
+}
