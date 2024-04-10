@@ -1,32 +1,32 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { BASE_URL, PO_REGISTER } from "../../constants/apiUrl";
+import { BASE_URL, FIN_YEAR } from "../../constants/apiUrl";
 
 
-const poRegister = createApi({
-    reducerPath: 'poRegister',
+const finYear = createApi({
+    reducerPath: 'finYear',
     baseQuery: fetchBaseQuery({
         baseUrl: BASE_URL,
     }),
-    tagTypes: ['PoRegister'],
+    tagTypes: ['finYear'],
     endpoints: (builder) => ({
-        getPoRegister: builder.query({
+        getFinYear: builder.query({
             query: () => {
                 return {
-                    url: PO_REGISTER,
+                    url: FIN_YEAR,
                     method: 'GET',
                     headers: {
                         'Content-type': 'application/json; charset=UTF-8',
                     },
                 }
             },
-            providesTags: ['PoRegister'],
+            providesTags: ['finYear'],
         }),
 
     }),
 })
 
 export const {
-    useGetPoRegisterQuery,
-} = poRegister;
+    useGetFinYearQuery,
+} = finYear;
 
-export default poRegister;
+export default finYear;

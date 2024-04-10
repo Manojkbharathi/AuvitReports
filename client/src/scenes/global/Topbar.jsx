@@ -84,13 +84,13 @@ const Topbar = () => {
         <img
           src={`../../assets/pin.a0917c99.png`}
           alt="user-profile"
-          className='w-[25%] h-[100%]'
+          className='w-[15%] h-[100%]'
           style={{ borderRadius: '10%', cursor: 'pointer' }}
         />
 
       </Box>
       <div>
-        {['left', 'bottom'].map((anchor) => (
+        {['left'].map((anchor) => (
           <React.Fragment key={anchor}>
             <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
             <SwipeableDrawer

@@ -33,15 +33,15 @@ function App() {
                 path="/*"
                 element={
                   < >
-                    <div className='flex-col relative'> <div className='w-screen '>
-                      <div className='fixed z-50'
+                    <div className='flex relative'> <div >
+                      <div className='fixed z-50 w-screen'
                       >                      <Topbar />
                       </div>
                     </div>
                       <main className="flex mt-20">
-                        {/* <div>
+                        <div>
                           <Sidebar />
-                        </div> */}
+                        </div>
 
 
 

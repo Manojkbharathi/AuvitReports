@@ -9,6 +9,7 @@ const oracledb = require('oracledb');
 oracledb.initOracleClient({ libDir: "C:\\oracle\\instantclient_19_20" });
 
 import {
+  finYear,
   poRegister
 } from "./src/routes/index.js"
 
@@ -34,7 +35,9 @@ BigInt.prototype['toJSON'] = function () {
 
 app.use('/poRegister', poRegister)
 
-const PORT = 9000;
+app.use('/finYear', finYear)
+
+const PORT = 8000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);

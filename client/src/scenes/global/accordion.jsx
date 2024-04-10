@@ -60,9 +60,7 @@ const CustomizedAccordions = () => {
                     <Typography>Po Management</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography >
-                        Po Register
-                    </Typography>
+                    <h4 className='text-gray-500' onClick={() => dispatch(push({ id: 2, name: "TEAM" }))}>Po Register</h4>
                 </AccordionDetails>
             </Accordion>
             <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>

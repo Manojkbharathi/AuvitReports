@@ -1,18 +1,27 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { openTabs } from "./features";
 
+import { poRegister, finYear } from './service'
+import { setupListeners } from '@reduxjs/toolkit/query'
 
-const commonReducers = {
-    openTabs
-}
-const store = configureStore({
+
+
+
+export const store = configureStore({
     reducer: {
-        ...commonReducers,
+        //purchase
+        openTabs,
+        [poRegister.reducerPath]: poRegister.reducer,
+        [finYear.reducerPath]: finYear.reducer
+
+
+
     },
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            serializableCheck: false
-        }),
+        getDefaultMiddleware().concat(
+            [poRegister.middleware],
+            [finYear.middleware]),
+
 });
 
-export default store;
+setupListeners(store.dispatch)
